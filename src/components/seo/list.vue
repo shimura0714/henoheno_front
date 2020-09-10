@@ -1,20 +1,33 @@
 <template>
-  <div class="seo">
-    <Button @click="listAlert">ALERT</Button>    
+  <div class='seo'>
+    <ul>
+      <li>{{ one }}</li>
+      <li>{{ two }}</li>
+      <li>{{ three }}</li>
+    </ul>
+    <Button @click='requestSeo'>ALERT</Button>    
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script lang='ts'>
+import Vue from 'vue';
 
-@Component ({
+export default Vue.extend({
+  name: 'List',
+  data() {
+    return {
+      one: 'ONE',
+      two: 'TWO',
+      three: 'THREE'
+    }
+  },
   methods: {
-    listAlert: function(e): void {
-      alert('GetSeo')
-    },
+    requestSeo(): void {
+      this.one = "request"
+    }
   }
 })
-export default class List extends Vue {}
+
 
 </script>
 

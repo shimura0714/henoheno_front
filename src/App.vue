@@ -1,20 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div id='app'>
+    <img alt='Vue logo' src='./assets/logo.png'>
     <List />
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+<script lang='ts'>
+import Vue  from 'vue';
 import List from './components/seo/list.vue';
 
-@Component({
+export default Vue.extend({
+  name: 'App',
   components: {
-    List,
-  },
-})
-export default class App extends Vue {}
+    List
+  } 
+});
+
 </script>
 
 <style>
